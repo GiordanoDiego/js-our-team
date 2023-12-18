@@ -15,8 +15,6 @@ document.getElementById('idHtml').innerHTML = noveVariabileJS;
 
 
 /* 
-    MILESTONE 1:
-    Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
     MILESTONE 2:
     Stampare le stesse informazioni su DOM sottoforma di stringhe
     Consigli del giorno:
@@ -25,6 +23,8 @@ document.getElementById('idHtml').innerHTML = noveVariabileJS;
     E ricordiamoci che console.log() è nostro amico!
     Buon lavoro!
 */
+
+// mileston 0
 // creo array di oggetti
 const team = [
     {
@@ -60,6 +60,14 @@ const team = [
     }
 ];
 
-
+//milestone 1
 console.log('team', team, typeof team);
 
+// mileston 1
+for (let i = 0; i<team.length; i++){
+    console.log("Mebro Team", team[i]);
+
+    for(let key in team[i]){
+        console.log("-", key, ":",team[i][key]);
+    }
+}
