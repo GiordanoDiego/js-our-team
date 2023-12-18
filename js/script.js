@@ -1,28 +1,3 @@
-/*
-console.log('nomeVariabile', nomeVariabile, typeof nomeVariabile);
-
-document.getElementById('idHtml').innerHTML = noveVariabileJS;
-
-//valore input 
-    userName = document.getElementById('userName');
-    userNameValue = userName.value;
-
-//controllare se il valore è Nan
-    if(isNaN(kmValue))
-
-*/
-
-
-
-/* 
-    MILESTONE 2:
-    Stampare le stesse informazioni su DOM sottoforma di stringhe
-    Consigli del giorno:
-    Ragioniamo come sempre a step.
-    Prima la logica in italiano e poi traduciamo in codice.
-    E ricordiamoci che console.log() è nostro amico!
-    Buon lavoro!
-*/
 
 // mileston 0
 // creo array di oggetti
@@ -70,4 +45,25 @@ for (let i = 0; i<team.length; i++){
     for(let key in team[i]){
         console.log("-", key, ":",team[i][key]);
     }
+}
+
+
+/* 
+    MILESTONE 2:
+    Stampare le stesse informazioni su DOM sottoforma di stringhe
+*/
+
+let teamContainer = document.getElementById('teams_container');
+console.log("teamContainer Team",teamContainer);
+
+
+for (let i = 0; i<team.length; i++){
+    console.log("Mebro Team", team[i]);
+    
+
+    for(let key in team[i]){
+        console.log("-", key, ":",team[i][key]);
+        teamContainer.innerHTML += " - " + key + ": " +team[i][key] + "<br>";
+    }
+    teamContainer.innerHTML += "<hr>";
 }
