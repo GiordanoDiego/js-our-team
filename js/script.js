@@ -47,7 +47,7 @@ console.log('team', team, typeof team);
 let teamContainer = document.getElementById('teams_container');
 console.log("teamContainer Team",teamContainer);
 
-
+/* MILESTONE 2
 for (let i = 0; i<team.length; i++){
     console.log("Mebro Team", team[i]);
     
@@ -62,4 +62,27 @@ for (let i = 0; i<team.length; i++){
         
     }
     teamContainer.innerHTML += "<hr>";
+}
+*/
+
+
+//BONUS 2
+let cardsContainer = document.querySelector('.cards_container');
+console.log("cardsContainer Team",cardsContainer);
+for (let i = 0; i<team.length; i++){
+ 
+        cardsContainer.innerHTML += 
+        `
+            <div class="card m-2" style="width: 20rem;">
+                <img src="./img/${team[i].img}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">${team[i].name}</h5>
+                <p class="card-text">${team[i].role}</p>
+                </div>
+            </div>
+        `;
+
+        
+    
+    cardsContainer.innerHTML += "<hr>";
 }
