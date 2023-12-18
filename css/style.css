@@ -5,6 +5,6 @@
 
 
 /* -----------------DEBUG----------------- */
-.debug .container {
-    border: 1px dashed red;
+img{
+    width: 150px;
 }

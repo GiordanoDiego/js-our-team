@@ -38,15 +38,6 @@ const team = [
 //milestone 1
 console.log('team', team, typeof team);
 
-// mileston 1
-for (let i = 0; i<team.length; i++){
-    console.log("Mebro Team", team[i]);
-
-    for(let key in team[i]){
-        console.log("-", key, ":",team[i][key]);
-    }
-}
-
 
 /* 
     MILESTONE 2:
@@ -62,8 +53,13 @@ for (let i = 0; i<team.length; i++){
     
 
     for(let key in team[i]){
-        console.log("-", key, ":",team[i][key]);
-        teamContainer.innerHTML += " - " + key + ": " +team[i][key] + "<br>";
+        if(key == "img"){
+            teamContainer.innerHTML += `<img src="./img/${team[i][key]}" alt="">`;
+        }else{
+            console.log("-", key, ":",team[i][key]);
+            teamContainer.innerHTML += " - " +"<strong>" +key +"</strong>" + ": " +team[i][key] + "<br>";
+        }
+        
     }
     teamContainer.innerHTML += "<hr>";
 }
